@@ -21,12 +21,15 @@ for line in file:
 		break
 	print(line)
 	line = line.split()
-	print("after split" ,line[0])
+	# print("after split" ,line[0])
 	defbody['plaintext'] = line[0]
 	resp = r.post(url,json = defbody, verify=False)
-	print(resp.text)
+	# print(type(resp.text))
+	arr = resp.text.split()
+	print(arr[1][1:-2])
+	cipher = arr[1][1:-2]+'\n'
 	count = count + 1
-	output_file.write(resp.text['ciphertext'])
+	output_file.write(cipher)
 
 
 
