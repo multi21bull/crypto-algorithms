@@ -31,4 +31,4 @@ for line in text:
 	cipher = arr[1][1:-2]+'\n'
 	count = count + 1
 	output_file.write(cipher)
-	time.sleep(.010)
+	# time.sleep(.010)
