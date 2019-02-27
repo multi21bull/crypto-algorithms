@@ -75,18 +75,40 @@ def total_before_sbox():
 	]
 	count=0
 	for input_bits in text:
-		output_bits = ''
-		for x in ex:
-			# print(x)
-			# print(len(input_bits))
-			output_bits = output_bits + (input_bits[x-1])
-			# print(len(output_bits))
-			# output_file.write(output_bits+'\n')
+		if(count%2==0):
+			count = count + 1
+
+			output_bits = ''
+			for x in ex:
+				# print(x)
+				# print(len(input_bits))
+				output_bits = output_bits + (input_bits[x-1])
+				# print(len(output_bits))
+				# output_file.write(output_bits+'\n')
+				# count = count + 1 
+				# print(count)
+			output_file.write(output_bits+'\n')
+		else:
 			count = count + 1 
-			print(count)
-		output_file.write(output_bits+'\n')
+
+	for input_bits in text:
+		if(count%2==1):
+			count = count + 1
+
+			output_bits = ''
+			for x in ex:
+				# print(x)
+				# print(len(input_bits))
+				output_bits = output_bits + (input_bits[x-1])
+				# print(len(output_bits))
+				# output_file.write(output_bits+'\n')
+				# count = count + 1 
+				# print(count)
+			output_file.write(output_bits+'\n')
+		else:
+			count = count + 1 
 
 # input_bit = '11001110000101110111110111110011'
-# expansion()
+expansion()
 inverse_permutation()
-# total_before_sbox()
+total_before_sbox()

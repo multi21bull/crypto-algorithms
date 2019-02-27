@@ -137,9 +137,19 @@ int main()
 
     }
     for (int i = 0; i < 8; ++i)
-    {
-      for(int j = 0 ; j < 64 ; ++j)
+    { 
+      int max = 0 ;
+      int sum = 0 ;
+      for(int j = 0 ; j < 64 ; ++j){
+        if(k[i][j]>max){
+          max = k[i][j];
+        }
+        sum += k[i][j];
         fprintf(fo_k, "%d = %lld\n",j,k[i][j]);
+      }
+      cout<<max<<endl;
+      sum = sum/64.0;
+      cout<<sum<<endl;
       fprintf(fo_k, "---------------------------------\n");
     }
     return 0;
