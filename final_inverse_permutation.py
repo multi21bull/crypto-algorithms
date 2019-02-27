@@ -14,7 +14,7 @@ def final_inverse():
 	text = input_file.readlines()
 	for line in text:
 		for x in invrfp:
-			print(x)
+			# print(x)
 			output_file.write(line[x-1])
 		output_file.write('\n')
 
@@ -31,9 +31,9 @@ def output_xor():
 			first = int(first, 2)
 			second = int(second, 2)
 			xor = first ^ second
-			print(xor)
+			# print(xor)
 			xor = format(xor,'064b')
-			print(xor)
+			# print(xor)
 			output_file.write(xor)
 			output_file.write('\n')
 		count = count + 1
@@ -47,8 +47,8 @@ def input_xor():
 	text = input_file.readlines()
 	for line in text:
 		second = line[0:32]
-		print(second)
-		print(len(second))
+		# print(second)
+		# print(len(second))
 		total = first + second
 		output_file.write(total+'\n')
 # final_inverse()
