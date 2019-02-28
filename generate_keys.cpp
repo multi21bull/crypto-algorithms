@@ -23,7 +23,7 @@ int main() {
 	 47 ,29 ,37 ,40 ,50 ,33 ,55 ,43 ,30 ,54 ,31 ,49 ,38 ,44,
 	 35 ,56 ,52 ,32 ,46 ,39 ,42};
 	 
-	 string temp;
+	 string temp="";
 	 for(int i=0;i<56;i++) temp.push_back('*');
 	 
 	 for(int i =0;i<48;i++){
